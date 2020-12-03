@@ -1,0 +1,77 @@
+<html>
+<head>
+<title> Login/Sign-up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="bgimg">
+ <div class="formbx">
+  <div class="container">
+    <div id="btn1"></div>
+    <button type="button" class="btn" onclick="login()">Log In</button>
+    <button type="button" class="btn" onclick="register()">Register</button>
+  </div>
+   
+  <form id="login" class="data" method="POST" action="pg2.html">
+  <input id="eml" type="email" class="input1" placeholder="User ID" required>
+  <input id="pwd1" type="password" class="input1" placeholder="Enter Password" required>
+  <input id="show_l" type="checkbox" class="show_pwd_l" onclick="pwd_l()"><label id="show_lbl_l"> Show </label>
+  <button type="submit" class="submit" >Log In! </button>
+  </form>
+   
+  <form id="register" class="data" method="POST" action="pg2.html">
+  <input type="email" class="input1" placeholder="Email ID"required>
+  <input id="pwd2" type="password" class="input1" placeholder="Enter password" required>
+  <input id="show_r1" type="checkbox" class="show_pwd_r1" onclick="pwd_r()"><label id="show_lbl_r1"> Show </label>
+  <input id="cnfrm" type="password" class="input1" placeholder="Re-Enter Password" required>
+  <input id="show_r2" type="checkbox" class="show_pwd_r2" onclick="cnfrm_r()"><label id="show_lbl_r2"> Show </label>
+  <button type="submit" class="submit">Register! </button>
+  </form>
+ 
+ </div>
+</div>
+
+
+<script>
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn1");
+
+
+function register(){
+x.style.left = "-450px";
+y.style.left = "80px";
+z.style.left = "120px";
+}
+
+function login(){
+x.style.left = "80px";
+y.style.left = "450px";
+z.style.left = "0px";
+}
+
+function pwd_l(){
+var p = document.getElementById("pwd1");
+if (p.type == "password"){
+p.type = "text";}
+else{ p.type = "password";}
+}
+
+function pwd_r(){
+var q = document.getElementById("pwd2");
+if (q.type == "password"){
+q.type = "text";}
+else{ q.type = "password";}
+}
+
+function cnfrm_r(){
+var r = document.getElementById("cnfrm");
+if (r.type == "password"){
+r.type = "text";}
+else{ r.type = "password";}
+}
+
+</script>
+</body>
+</html>
